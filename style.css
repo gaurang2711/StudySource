@@ -137,6 +137,7 @@ li{
 
     .study:hover::before {
       transform: scaleX(1);
+      content="Padhlo!!"
     }
 
     .study-content {
