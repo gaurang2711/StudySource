@@ -121,18 +121,39 @@ li{
     box-shadow: 12px 12px 12px 10px rgba(235, 171, 169, 0.61);
 }
 
-.study{
-    padding: 10px 50px;
-    border-radius: 12px;
-    font-family: Poppins;
-    background-color: rgba(93, 93, 252, 0.623);
-    border: none;
-    font-weight: bold;
-    transition: all ease 1s;
-    cursor: pointer;
-}
-.study:hover{
-    border: 1px solid rgb(74, 74, 224);
-    box-shadow: 10px 10px 10px rgb(92, 92, 228);
+.study {
+      position: relative;
+      overflow: hidden;
+      height: 3rem;
+      padding: 0 2rem;
+      border-radius: 1.5rem;
+      background: #3d3a4e;
+      background-size: 400%;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
 
-}
+    .study:hover::before {
+      transform: scaleX(1);
+    }
+
+    .study-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .study::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+      width: 100%;
+      height: inherit;
+      border-radius: inherit;
+      background: linear-gradient(82.3deg,
+          rgba(150, 93, 233, 1) 10.8%,
+          rgba(99, 88, 238, 1) 94.3%);
+      transition: all 0.475s;
